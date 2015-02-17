@@ -1,4 +1,4 @@
-package eventdemoapp;
+package EventAppNB;
 
 public class Event {
     

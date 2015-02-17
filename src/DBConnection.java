@@ -1,4 +1,4 @@
-package eventdemoapp;
+package EventAppNB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,6 +8,7 @@ public class DBConnection {
 
     private static Connection sConnection;
 
+    // implement the DBConnection as a Singleton
     public static Connection getInstance() throws ClassNotFoundException, SQLException {
         String host, db, user, password;
         
