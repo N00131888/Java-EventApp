@@ -101,7 +101,7 @@ public class EventDemoApp {
             System.out.println("Name: " + ev.getName());
         }
     }
-
+            //comment
 	private static String getString(Scanner keyboard, String prompt) {
 		System.out.print(prompt);
 		return keyboard.nextLine();
