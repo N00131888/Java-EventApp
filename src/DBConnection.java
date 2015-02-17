@@ -16,7 +16,7 @@ public class DBConnection {
         db = "n00131888";
         user = "N00131888";
         password = "N00131888";
-        
+
         if (sConnection == null || sConnection.isClosed()) {
             String url = "jdbc:mysql://" + host + "/" + db;
             Class.forName("com.mysql.jdbc.Driver");
