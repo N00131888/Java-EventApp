@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 //test comment for commit
 public class DBConnection {
-
+    //another test comment
     private static Connection sConnection;
 
     // implement the DBConnection as a Singleton
