@@ -6,6 +6,7 @@ import java.sql.SQLException;
 //test comment for commit
 public class DBConnection {
     //another test comment
+    //more comments
     private static Connection sConnection;
 
     // implement the DBConnection as a Singleton
