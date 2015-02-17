@@ -3,7 +3,7 @@ package EventAppNB;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-//sorry for annoying ye danny
+//test comment for commit
 public class DBConnection {
 
     private static Connection sConnection;
