@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EventTableGateway {
-    private static final String TABLE_NAME = "events";
-    private static final String COLUMN_ID = "id";
+    private static final String TABLE_NAME = "event";
+    private static final String COLUMN_EVENTID = "eventID";
     private static final String COLUMN_TITLE = "title";
     private static final String COLUMN_DESCRIPTION = "description";
     private static final String COLUMN_START_DATE_TIME = "startDateTime";
@@ -26,32 +26,29 @@ public class EventTableGateway {
         mConnection = connection;
     }
     public List<Event> getEvents() throws SQLException {
-        String query;       // the SQL query to execute
-        Statement stmt;     // the java.sql.Statement object used to execute the
-                            // SQL query
-        ResultSet rs;       // the java.sql.ResultSet representing the result of
-                            // SQL query 
-        List<Event> events;   // the java.util.List containing the Programmer objects
-                            // created for each row in the result of the query
-        int id;             // the id of a event
+        String query;      
+        Statement stmt;    
+                           
+        ResultSet rs;      
+                            
+        List<Event> events;   
+                            
+        int id;            
         String title, description, startDateTime, endDateTime, name, email;
         int maxAttendees;
         double cost;
-        Event ev;       // a Programmer object created from a row in the result of
-                            // the query
+        Event ev;       
+                        
 
-        // execute an SQL SELECT statement to get a java.util.ResultSet representing
-        // the results of the SELECT statement
+        
+        
         query = "SELECT * FROM " + TABLE_NAME;
         stmt = this.mConnection.createStatement();
         rs = stmt.executeQuery(query);
 
-        // iterate through the result set, extracting the data from each row
-        // and storing it in a Programmer object, which is inserted into an initially
-        // empty ArrayList
         events = new ArrayList<Event>();
         while (rs.next()) {
-            id = rs.getInt(COLUMN_ID);
+            id = rs.getInt(COLUMN_EVENTID);
             title = rs.getString(COLUMN_TITLE);
             description = rs.getString(COLUMN_DESCRIPTION);
             startDateTime = rs.getString(COLUMN_START_DATE_TIME);
